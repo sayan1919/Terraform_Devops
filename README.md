@@ -35,10 +35,34 @@ The project is organized into multiple files and directories to ensure scalabili
 ### 1. `provider.tf`
 - **Purpose**: Specifies the cloud provider (AWS) and its credentials.
 - **Why**: Required for Terraform to authenticate with AWS and manage resources.
-- **Example**:
-  ```hcl
-  provider "aws" {
-    region     = "us-west-1"
-    access_key = "your_access_key"
-    secret_key = "your_secret_key"
-  } 
+
+### 2. `main.tf` 
+- **Purpose**: Defines the overall infrastructure resources.
+- **Why**: Acts as the entry point for Terraform configurations. 
+
+### 3. `variables.tf`
+- **Purpose**: Declares variables used across the configuration.
+- **Why**: Makes the configuration dynamic and easier to manage. 
+
+### 4. `outputs.tf`
+- **Purpose**: Specifies the outputs to display key information about the infrastructure.
+- **Why**: Useful for displaying important details about the deployed infrastructure.
+
+### 5. `ec2.tf & s3.tf`
+- **Purpose**: Configures the provisioning of EC2 instances & management of s3.
+- **Why**: Essential for creating and managing EC2 instances as well as s3 in AWS.
+
+### 6. `dynamodb.tf` 
+- **Purpose**: Configures DynamoDB tables for NoSQL database solutions.
+- **Why**: Useful for creating and managing DynamoDB tables for NoSQL database needs. 
+
+
+## Key Features
+	-	Infrastructure as Code (IaC): Automates infrastructure management with code.
+	-	Modularity: Reusable modules for scalable infrastructure provisioning.
+	-	AWS Resource Management: Examples for provisioning EC2, S3, and DynamoDB resources.
+	-	Parameterization: Dynamic configurations using variables.
+	-	Output Management: Easily retrieve essential information about deployed resources.
+	-	State Tracking: Uses state files to track the current state of the infrastructure.
+
+  
